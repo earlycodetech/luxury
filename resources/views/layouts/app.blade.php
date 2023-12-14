@@ -14,9 +14,9 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/css/app.css','resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
+<body class="bg-white">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -72,9 +72,17 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>
 </body>
+<footer class="mt-5">
+    <div class="container-fluid bg-dark-subtle p-5">
+        <h5 class="text-center">
+            Copyright &copy; 2023. Luxury Hotels
+        </h5>
+    </div>
+
+</footer>
 </html>

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('room_name');
             $table->string('room_details');
             $table->integer('available_rooms')->default(0);
-            $table->decimal('room_price',8,2);
+            $table->decimal('room_price',8,2)->default(0.00);
             $table->timestamps();
         });
     }
