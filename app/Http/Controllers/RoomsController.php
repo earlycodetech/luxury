@@ -22,9 +22,9 @@ class RoomsController extends Controller
        
         Rooms::create([
             'room_name' => $request->input('room_name'),
-            'room_details' => ,
-            'available_rooms' => ,
-            'room_price' => 
+            'room_details' => $request->input('room_details'),
+            'available_rooms' => $request->input('available_rooms'),
+            'room_price' =>  $request->input('room_price')
         ]);
 
         // return redirect('/create/room');
