@@ -25,3 +25,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Admin Room Routes
 Route::get('create/room', [RoomsController::class, "create"])->name('admin.room.create');
 Route::post('create/room', [RoomsController::class, "store"])->name('admin.room.store');
+
+Route::get('rooms', [RoomsController::class, 'all_rooms'])->name('admin.all.rooms');
