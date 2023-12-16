@@ -21,8 +21,16 @@ class Rooms extends Model
     //     'id',
     //     'room_price'
     // ];
-    
+
     // protected $casts = [
     //     'status' => "boolean"
     // ];
+
+
+    /*
+        C - Create
+        R - Read
+        U - Update
+        D - Delete
+    */ 
 }

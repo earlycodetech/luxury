@@ -40,9 +40,19 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="" class="form-labe">Room Price</label>
+                            <label for="" class="form-label">Room Price</label>
                             <input type="number" name="room_price" class="form-control">
                             @error('room_price')
+                                <p class="text-danger fw-bold text-center mb-1">
+                                    {{ $message }}
+                                </p>
+                            @enderror
+                        </div>
+
+                        <div class="m-3">
+                            <label for="" class="form-label">Room Details</label>
+                            <textarea name="room_details" class="form-control" rows="5"></textarea>
+                            @error('room_details')
                                 <p class="text-danger fw-bold text-center mb-1">
                                     {{ $message }}
                                 </p>
