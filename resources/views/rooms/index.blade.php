@@ -22,14 +22,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Deluxe Room</td>
-                            <td>20</td>
-                            <td>₦40,000.00</td>
-                            <td>14th Dec. 2023 9:00 am</td>
-                            <td>14th Dec. 2023 9:00 am</td>
-                            <td></td>
-                        </tr>
+                        @forelse ($rooms as $item)
+                            <tr>
+                                <td>Deluxe Room</td>
+                                <td>20</td>
+                                <td>₦40,000.00</td>
+                                <td>14th Dec. 2023 9:00 am</td>
+                                <td>14th Dec. 2023 9:00 am</td>
+                                <td></td>
+                            </tr>
+                        @empty
+                            <tr>
+                                <td> No Rooms Created Yet </td>
+                            </tr>
+                        @endforelse
+
+                   
                     </tbody>
                 </table>
             </div>

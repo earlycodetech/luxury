@@ -31,4 +31,10 @@ class RoomsController extends Controller
         // return redirect()->route('admin.room.create');
         return back()->with('success', "Room has been created!");
     }
+
+    public function all_rooms()
+    {
+        $rooms = Rooms::all();
+        return view('rooms.index', compact('rooms'));
+    }
 }

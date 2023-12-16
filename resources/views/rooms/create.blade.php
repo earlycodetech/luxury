@@ -5,7 +5,7 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h1 class="text-center">Create New Room</h1>
 
-                <a href="" class="btn btn-primary">
+                <a href="{{ route('admin.all.rooms') }}" class="btn btn-primary">
                     All Rooms
                 </a>
             </div>
