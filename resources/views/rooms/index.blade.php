@@ -27,7 +27,7 @@
                                 <td> {{ $item->room_name }} </td>
                                 <td> {{ $item->available_rooms }} </td>
                                 <td>₦ {{ number_format($item->room_price,2) }}</td>
-                                <td>14th Dec. 2023 9:00 am</td>
+                                <td> {{ $item->created_at->format('jS M. Y ') }} </td>
                                 <td>14th Dec. 2023 9:00 am</td>
                                 <td></td>
                             </tr>
