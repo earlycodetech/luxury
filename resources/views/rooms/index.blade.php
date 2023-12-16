@@ -24,9 +24,9 @@
                     <tbody>
                         @forelse ($rooms as $item)
                             <tr>
-                                <td>Deluxe Room</td>
-                                <td>20</td>
-                                <td>₦40,000.00</td>
+                                <td> {{ $item->room_name }} </td>
+                                <td> {{ $item->available_rooms }} </td>
+                                <td>₦ {{ number_format($item->room_price,2) }}</td>
                                 <td>14th Dec. 2023 9:00 am</td>
                                 <td>14th Dec. 2023 9:00 am</td>
                                 <td></td>
