@@ -29,7 +29,11 @@
                                 <td>₦ {{ number_format($item->room_price,2) }}</td>
                                 <td> {{ $item->created_at->format('jS M. Y h:i a') }} </td>
                                 <td> {{ $item->updated_at->diffForHumans() }} </td>
-                                <td></td>
+                                <td>
+                                    <a href="{{ route('admin.room.edit', ['id' => $item->id]) }}" class="btn btn-primary btn-sm">
+                                        Edit
+                                    </a>
+                                </td>
                             </tr>
                         @empty
                             <tr>

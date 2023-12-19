@@ -26,4 +26,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('create/room', [RoomsController::class, "create"])->name('admin.room.create');
 Route::post('create/room', [RoomsController::class, "store"])->name('admin.room.store');
 
+Route::get('edit/{id}/room', [RoomsController::class, 'edit'])->name('admin.room.edit');
+Route::put('update/{id}/room', [RoomsController::class, 'update'])->name('admin.room.update');
+
+Route::delete('room/{id}/delete', [RoomsController::class, 'destroy'])->name('admin.room.destroy');
+
+
 Route::get('rooms', [RoomsController::class, 'all_rooms'])->name('admin.all.rooms');

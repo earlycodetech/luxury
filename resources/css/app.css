@@ -19,7 +19,7 @@
 
 
 
-.table *:not(button,span) {
+.table *:not(button,span,.btn) {
     background-color: #ffffff !important;
     font-size: 12px !important;
 }
