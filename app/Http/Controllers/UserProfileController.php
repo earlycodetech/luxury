@@ -10,4 +10,14 @@ class UserProfileController extends Controller
     {
         return view('users.profile');
     }
+
+
+    public function update_profile(Request $request)
+    {
+       $request->validate([
+        'name' => "required|string",
+        'phone_number' => "required|string",
+        'picture' => "nullable|image|mimes:png,jpeg,jpg,gif|max:1028"
+       ]);
+    }
 }
