@@ -64,4 +64,10 @@ class RoomsController extends Controller
         // return redirect()->route('admin.room.create');
         return back()->with('success', "Room has been created!");
     }
+
+    public function destroy($id)
+    {
+        Rooms::where('id','=',$id)->delete();
+        return back()->with('success', "Room has been deleted!");
+    }
 }
