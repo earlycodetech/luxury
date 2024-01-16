@@ -39,6 +39,12 @@
                                 <label for="" class="form-label"> Checkout Date </label>
                                <input type="datetime-local" class="form-control bg-transparent">
                             </div>
+
+                            <div class="col-12 text-center py-4">
+                                <button class="btn btn-primary rounded-pill px-5">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
