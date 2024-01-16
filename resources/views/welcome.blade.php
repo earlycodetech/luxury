@@ -22,22 +22,27 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <label for="" class="form-label">Room Type</label>
-                                <select  class="form-select">
-                                    <option value="">Deluxe Room</option>
-                                    <option value="">Regular Room</option>
+                                <select class="form-select">
+                                    @forelse ($rooms as $room)
+                                        <option> 
+                                            {{ $room->room_name . ' - ₦' . number_format($room->room_price, 0) }}
+                                        </option>
+                                    @empty
+                                        <option disabled> No Room Available</option>
+                                    @endforelse
                                 </select>
                             </div>
                             <div class="col-md-3">
                                 <label for="" class="form-label"> Number of Rooms </label>
-                               <input type="number" value="1" class="form-control text-center bg-transparent">
+                                <input type="number" value="1" class="form-control text-center bg-transparent">
                             </div>
                             <div class="col-md-3">
                                 <label for="" class="form-label"> Checkin Date </label>
-                               <input type="datetime-local" class="form-control bg-transparent">
+                                <input type="datetime-local" class="form-control bg-transparent">
                             </div>
                             <div class="col-md-3">
                                 <label for="" class="form-label"> Checkout Date </label>
-                               <input type="datetime-local" class="form-control bg-transparent">
+                                <input type="datetime-local" class="form-control bg-transparent">
                             </div>
 
                             <div class="col-12 text-center py-4">
