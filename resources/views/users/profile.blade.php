@@ -8,9 +8,14 @@
                     <h1>My Profile</h1>
 
                     <div class="d-flex justify-content-end pe-5">
-                        <div style="width: 200px;">
-                            <img src="{{ asset('images/img-1.jpg') }}" class="img-thumbnail object-fit-cover"
-                                style="width: 200px; height:200px;" alt="">
+                        <div style="width: 200px;">\
+                            @if (auth()->user()->dp)
+                                <img src="{{ asset(auth()->user()->dp->path) }}" class="img-thumbnail object-fit-cover"
+                                    style="width: 200px; height:200px;" alt="">
+                            @else
+                                <img src="{{ asset('images/img-1.jpg') }}" class="img-thumbnail object-fit-cover"
+                                    style="width: 200px; height:200px;" alt="">
+                            @endif
 
                             <input type="file" name="picture" id="" class="form-control">
                             @error('picture')
