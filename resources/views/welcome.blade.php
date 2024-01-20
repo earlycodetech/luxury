@@ -34,7 +34,7 @@
                             </div>
                             <div class="col-md-3">
                                 <label for="" class="form-label"> Number of Rooms </label>
-                                <input type="number" value="1" class="form-control text-center bg-transparent">
+                                <input type="text" inputmode="numeric" value="1" class="form-control text-center bg-transparent">
                             </div>
                             <div class="col-md-3">
                                 <label for="" class="form-label"> Checkin Date </label>

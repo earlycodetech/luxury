@@ -40,3 +40,6 @@ Route::get('rooms', [RoomsController::class, 'all_rooms'])->name('admin.all.room
 // PROFILE ROUTE
 Route::get('profile', [UserProfileController::class, 'view_profile'])->name('profile.view')->middleware(['auth','verified']);
 Route::patch('profile', [UserProfileController::class, 'update_profile'])->name('profile.update')->middleware(['auth', 'verified']);
+
+Route::get('contact', [PagesController::class, 'show_contact_form'])->name('contact.page');
+Route::post('contact', [PagesController::class, 'submit_contact_form'])->name('contact.form.submit');
